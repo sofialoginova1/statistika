@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Koerakostüümid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg cvet1">
+    <div class="container-fluid">
+        <img class="navbar-brand mx-auto" src="https://sun9-64.userapi.com/impg/f1rDv_9zQRyXSHuAmyAzexGZk0pOe8bJHlWRcQ/ouWhPUy6dQ0.jpg?size=716x126&quality=96&sign=f950c8824b2d88b8584d9ccca1cf9b47&type=album" height="70px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <div class="d-flex">
+                 <a href="link_to_profile" class="btn knopka" style="background-color: #BD52E3">
+        <i class="bi bi-person"></i>
+        </a>
+        <a href="link_to_search" class="btn knopka" id="searchButton" style="background-color: #BD52E3">
+        <i class="bi bi-search"></i>
+        </a>
+        <button class="btn knopka" id="infoButton" style="background-color: #BD52E3">
+        <i class="bi bi-list"></i>
+        </button>
+</div>
+            <div class="dropdown-menu dropdown-menu-end" id="infoMenu" aria-labelledby="infoButton">
+            <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Tooded</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-temaatikad/">Lisa toode</a>
+            <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Tellimused</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Kasutajad</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Statistika</a>
+</div>
+            </div>
+            <div class="dropdown-menu dropdown-menu-end" id="menuContent" aria-labelledby="searchButton">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Leia sobiv toode" aria-label="Search">
+                    <button class="btn knopka" type="submit" style="background-color: #E6BBF6">
+                        Otsi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+    const searchButton = document.getElementById("searchButton");
+const menuContent = document.getElementById("menuContent");
+const searchInput = document.querySelector('form[role="search"] input');
+const searchButtonInMenu = document.querySelector('form[role="search"] button');
+
+searchButton.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menuContent.style.display = menuContent.style.display === "none" ? "block" : "none";
+});
+
+searchInput.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+searchButtonInMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", function () {
+    menuContent.style.display = "none";
+});
+
+const infoButton = document.getElementById("infoButton");
+const infoMenu = document.getElementById("infoMenu");
+
+infoButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  infoMenu.style.display = infoMenu.style.display === "none" ? "block" : "none";
+});
+
+document.addEventListener("click", function () {
+  infoMenu.style.display = "none";
+});
+</script>
+    <header>
+        <h1>2023. aasta müügistatistika</h1>
+    </header>
+
+    <section>
+        <img class="center-img" src="https://sun9-50.userapi.com/impg/8CbDzGgYi9k-FtUSDfySybEfcVB7lm-13QqXuA/FnCyaZLs01I.jpg?size=754x481&quality=96&sign=1e6b3d96daf5a44c80c54a8a124b0732&type=album" width="700">
+    </section>
+    <header>
+        <h1>2023. aasta koerakostüümide müügistatistika</h1>
+    </header>
+     <section>
+        <img class="center-img" src="https://sun9-8.userapi.com/impg/bXefSw7Qp-09JG7-RQbPcbyPBfvLEHHuBvBpqg/3vFKyiYgJqA.jpg?size=836x457&quality=96&sign=2c9eec2ff721c05fa3672c81348ed604&type=album" width="700">
+    </section>
+        <header>
+        <h1>2023. aasta kassikostüümide müügistatistika</h1>
+    </header>
+     <section>
+        <img class="center-img" src="https://sun9-72.userapi.com/impg/xWFOtsbU6_S254ZYfQPNetsbxLAR_nQv7RtiJA/7hSGktKU8gk.jpg?size=838x458&quality=96&sign=e6224b63c2be753b2dfb12a7a86628d3&type=album" width="700">
+    </section>
+
+</body>
+</html>
